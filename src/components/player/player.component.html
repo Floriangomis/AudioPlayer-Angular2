@@ -1,0 +1,25 @@
+<audio [src]="currentTrack.link" #audioPlayer></audio>
+
+<div>
+    <img class="cover" [src]="currentTrack.cover" alt="">
+</div>
+
+<div>
+    {{ currentTrack.title }}
+</div>
+
+<span (click)='previousSong();'>
+    Previous
+</span>
+
+<span (click)='playBtnHandler();'>
+    {{ playPauseValue }}
+</span>
+
+<span (click)='nextSong();'>
+    Next
+</span>
+
+<div>
+    {{ currentTime | secondsToMinutes}}
+</div>
