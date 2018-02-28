@@ -30,6 +30,7 @@ export class PlayerComponent implements OnInit {
         this.playlistService.getSubjectCurrentTrack().subscribe( (currentTrack) => {
             console.debug(`Player receive the new Track : ${currentTrack.title}`);
             this.currentTrack = currentTrack;
+            this.play();
         }); 
 
         this.timeLineDuration.nativeElement.addEventListener('change', (data) => {
