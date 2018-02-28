@@ -1,7 +1,60 @@
-span {
-    cursor: pointer;
-}
+.container-player {
+    text-align: center;
 
-.cover {
-    max-width: 200px;
+    width: 300px;
+    background-color: rgba(0, 0, 0 ,.4);
+    
+    .cover-container {
+        
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .cover {
+            max-width: 200px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }    
+    }
+    .container-informations-track {
+
+        color: white;
+        font-family: sans-serif;
+
+        .title-track {
+            font-size: 1.4em;
+        }
+
+        .artist-name-track {
+            padding-top: 5px;
+            font-size: 1em;
+            font-weight: 100;
+
+            margin-bottom: 10px;
+        }
+
+        .timer-track {
+            margin-bottom: 20px;
+        }
+    }
+
+    .controllers-player {
+        
+        color: white;
+        display: inline-flex;
+
+        .previous-track {
+            cursor: pointer;
+            padding: 0 10px;
+            float: left;
+        }
+        .play-pause-track {
+            cursor: pointer;
+            padding: 0 10px;
+            float: left;
+        }
+        .next-track {
+            cursor: pointer;
+            padding: 0 10px;
+            float: left;
+        }
+    }
 }

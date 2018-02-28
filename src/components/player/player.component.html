@@ -1,25 +1,41 @@
 <audio [src]="currentTrack.link" #audioPlayer></audio>
 
-<div>
-    <img class="cover" [src]="currentTrack.cover" alt="">
-</div>
+<div class="container-player">
 
-<div>
-    {{ currentTrack.title }}
-</div>
+    <div class="cover-container">
+        <img class="cover" [src]="currentTrack.cover" alt="">
+    </div>
 
-<span (click)='previousSong();'>
-    Previous
-</span>
+    <div class="container-informations-track">
+        <div class="title-track no-select">
+            {{ currentTrack.title }}
+        </div>
 
-<span (click)='playBtnHandler();'>
-    {{ playPauseValue }}
-</span>
+        <div class="artist-name-track no-select">
+                {{ currentTrack.artist }}
+        </div>
 
-<span (click)='nextSong();'>
-    Next
-</span>
+        <div #timeLineTrack class="timeline-track">
+            <input class="no-select" type="range" min="0" max="{{duration}}" value="{{currentTime}}">
+        </div>
 
-<div>
-    {{ currentTime | secondsToMinutes}}
+        <div class="timer-track no-select">
+            {{ currentTime | secondsToMinutes}}
+        </div>
+    </div>
+
+    <div class="controllers-player">
+        <div (click)='previousSong();' class="previous-track">
+            <<
+        </div>
+        <div (click)='playBtnHandler();' class="play-pause-track">
+            {{ playPauseValue }}
+        </div>
+        <div (click)='nextSong();' class="next-track">
+            >>
+        </div>
+    </div>
+    <div class="claar"></div>
+
+    <playlist class="container no-select"></playlist>
 </div>

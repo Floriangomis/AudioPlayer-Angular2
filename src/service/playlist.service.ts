@@ -7,19 +7,22 @@ export class PlaylistService {
 
     playlist: [Track] = [
         {
-            title: 'Do for love - Tupac',
+            title: 'Do for love',
             link: 'https://dc382.4shared.com/img/n82_JNsIce/81078929/dlink__2Fdownload_2Fn82_5FJNsIce_2F2Pac_5F-_5FDo_5FFor_5FLove.mp3_3Fsbsr_3D2feec5bc19f2bcf44f4bee377eded5e79d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000301660641-6x3gor-t500x500.jpg'
+            cover: 'https://i1.sndcdn.com/artworks-000301660641-6x3gor-t500x500.jpg',
+            artist: 'Tupac'
         },
         {
-            title: 'Galate - Nekfeu',
+            title: 'Galate',
             link: 'https://dc698.4shared.com/img/LxFiE8wjce/2e81256f/dlink__2Fdownload_2FLxFiE8wjce_2FNekfeu_5F-_5FSaturne_5F_5Ffeat_5FSneazzy.mp3_3Fsbsr_3D35c1d9b8cf900d8d9dbab86289a158af9d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000298629111-zerc8s-t500x500.jpg'
+            cover: 'https://i1.sndcdn.com/artworks-000298629111-zerc8s-t500x500.jpg',
+            artist: 'Nekfeu'
         },
         {
-            title: 'Plume - Nekfeu',
+            title: 'Plume',
             link: 'https://dc622.4shared.com/img/-P3Iwdy2ce/11e5d980/dlink__2Fdownload_2F-P3Iwdy2ce_2FNekfeu_5F-_5FPlume.mp3_3Fsbsr_3Dae238231e6183d1ec5e15e0a02924fd29d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000292226010-e3pp2p-t500x500.jpg'
+            cover: 'https://i1.sndcdn.com/artworks-000292226010-e3pp2p-t500x500.jpg',
+            artist: 'Nekfeu'
         }  
     ];
 

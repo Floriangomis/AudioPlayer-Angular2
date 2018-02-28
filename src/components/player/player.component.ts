@@ -11,6 +11,7 @@ import { Track } from '../../model/track';
 export class PlayerComponent implements OnInit {
 
     @ViewChild('audioPlayer') player: ElementRef;
+    @ViewChild('timeLineTrack') timeLineDuration: ElementRef;
 
     currentTrack: Track;
     playPauseValue: string = 'Play';
@@ -26,8 +27,12 @@ export class PlayerComponent implements OnInit {
         this.playlistService.getSubjectCurrentTrack().subscribe( (currentTrack) => {
             console.debug(`Player receive the new Track : ${currentTrack.title}`);
             this.currentTrack = currentTrack;
-            this.play();
         }); 
+
+        this.timeLineDuration.nativeElement.addEventListener('change', (data) => {
+            this.player.nativeElement.currentTime = data.target.value;
+        })
+
         this.playlistService.init();
     };
 
