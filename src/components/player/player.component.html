@@ -23,13 +23,13 @@
     </div>
 
     <div class="controllers-player">
-        <div (click)='previousSong();' class="previous-track">
+        <div (click)='previousSong();' class="previous-track no-select">
             <<
         </div>
-        <div (click)='playBtnHandler();' class="play-pause-track">
+        <div (click)='playBtnHandler();' class="play-pause-track no-select">
             {{ playPauseValue }}
         </div>
-        <div (click)='nextSong();' class="next-track">
+        <div (click)='nextSong();' class="next-track no-select">
             >>
         </div>
     </div>
