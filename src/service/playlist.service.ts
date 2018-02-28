@@ -13,6 +13,12 @@ export class PlaylistService {
             artist: 'Tycho'
         },
         {
+            title: 'The butterfly effect',
+            link: 'https://dc697.4shared.com/img/r8U8iTjJei/c0178c9b/dlink__2Fdownload_2Fr8U8iTjJei_2FButterfly-Effect_5F322834362_5Fsou.mp3_3Fsbsr_3D5c76021c7a62d95c624dcde652f23d9f9d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
+            cover: 'https://i1.sndcdn.com/artworks-000305524002-bxdvmu-t500x500.jpg',
+            artist: 'Travis Scott'
+        },
+        {
             title: 'Awake',
             link: 'https://dc706.4shared.com/img/eohxDhaIba/5808801/dlink__2Fdownload_2FeohxDhaIba_2FTycho_5F_5F_5FAwake.mp3_3Fsbsr_3D82a923b7fc1ccf19ff880048d89da1519d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
             cover: 'https://i1.sndcdn.com/artworks-000060116506-zfp3zc-t500x500.jpg',
