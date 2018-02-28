@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+    background-color: #141414;
+}
+
 .no-select {
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
@@ -8,6 +13,6 @@
     user-select: none; /* Non-prefixed version, currently */
 }
 
-.claar {
+.clear {
     clear: both;
 }

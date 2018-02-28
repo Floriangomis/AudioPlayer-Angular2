@@ -18,6 +18,9 @@ export class PlayerComponent implements OnInit {
     currentTime: number = 0;
     duration: number = 0;
 
+    randomColor: string = '0';
+    randomColor2: string = '0';
+    randomColor3: string = '0';
 
     constructor(private playlistService: PlaylistService) { }
 
@@ -49,6 +52,10 @@ export class PlayerComponent implements OnInit {
         });
         this.player.nativeElement.addEventListener('timeupdate', (event) => {
             this.currentTime = Math.floor(this.player.nativeElement.currentTime);
+            // Value Used for dynamic background
+            this.randomColor = (Math.floor(Math.random() * 255) + 1).toString()
+            this.randomColor2 = (Math.floor(Math.random() * 205) + 1).toString()
+            this.randomColor3 =  (Math.floor(Math.random() * 125) + 1).toString()
         });
     };
 
@@ -88,4 +95,11 @@ export class PlayerComponent implements OnInit {
     checkSongHasStartedSinceAtleastTwoSeconds(): boolean {
         return this.player.nativeElement.currentTime > 2;
     };
+
+    getBackgroundColored(): {} {
+        let backgroundColored = {
+           'background-color': 'rgba('+this.randomColor+','+this.randomColor2+','+this.randomColor3+',.4)',
+        };
+        return backgroundColored;
+    }  
 }
