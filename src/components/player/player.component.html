@@ -1,4 +1,3 @@
-<audio [src]="currentTrack.link" #audioPlayer></audio>
 <div class="container-player" [ngStyle]="getBackgroundColored()">
 
     <div class="cover-container">
@@ -37,4 +36,6 @@
     <div class="clear"></div>
 
     <playlist class="container no-select"></playlist>
+    
+    <audio [src]="currentTrack.link" #audioPlayer></audio>
 </div>
