@@ -1,5 +1,5 @@
 <ul>
-    <li *ngFor="let track of playlist; let i = index" [ngClass]="{active: currentTrack.title === track.title}"(click)="pickASong(i);"> 
+    <li *ngFor="let track of playlist; let i = index" [ngClass]="{active: playlistTrack[1].title === track.title}"(click)="pickASong(i);"> 
         <div class="index-track">
             {{i+1}}
         </div>

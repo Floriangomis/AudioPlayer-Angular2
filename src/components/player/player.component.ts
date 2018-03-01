@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core/src/linker/element_ref';
 import { PlaylistService } from '../../service/playlist.service';
 import { Track } from '../../model/track';
+import { CoversliderComponent } from '../coverslider/coverslider.component';
 
 @Component({
     selector: 'player',
@@ -12,8 +13,10 @@ export class PlayerComponent implements OnInit {
 
     @ViewChild('audioPlayer') player: ElementRef;
     @ViewChild('timeLineTrack') timeLineDuration: ElementRef;
+    @ViewChild('coverSlider') coverSlider: CoversliderComponent
 
-    currentTrack: Track;
+    playlistTrack: any;
+    
     playPauseValue: string = 'Play';
     currentTime: number = 0;
     duration: number = 0;
@@ -27,9 +30,8 @@ export class PlayerComponent implements OnInit {
     ngOnInit() {
         this.bindPlayerEvent();
         
-        this.playlistService.getSubjectCurrentTrack().subscribe( (currentTrack) => {
-            console.debug(`Player receive the new Track : ${currentTrack.title}`);
-            this.currentTrack = currentTrack;
+        this.playlistService.getSubjectCurrentTrack().subscribe( (playlistTrack) => {
+            this.playlistTrack = playlistTrack;
             this.play();
         }); 
 
@@ -70,12 +72,14 @@ export class PlayerComponent implements OnInit {
     };
 
     nextSong(): void {
+        this.coverSlider.nextSlide()
         this.playlistService.nextSong();
         this.play();
     };
 
     previousSong(): void {
         if(!this.checkSongHasStartedSinceAtleastTwoSeconds()) {
+            this.coverSlider.previousSlide();
             this.playlistService.previousSong();
         } else {
             this.resetSong();
@@ -84,7 +88,7 @@ export class PlayerComponent implements OnInit {
     };
 
     resetSong():void {
-        this.player.nativeElement.src = this.currentTrack.link;
+        this.player.nativeElement.src = this.playlistTrack[1].link;
     };
 
     play(): void {
@@ -102,5 +106,5 @@ export class PlayerComponent implements OnInit {
            'background-color': 'rgba('+this.randomColor+','+this.randomColor2+','+this.randomColor3+',.4)',
         };
         return backgroundColored;
-    }  
+    };
 }

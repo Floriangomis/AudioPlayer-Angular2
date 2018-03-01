@@ -27,7 +27,7 @@ export class PlaylistService {
         {
             title: 'The Science of Pattern',
             link: 'https://dc742.4shared.com/img/ZU_V2bLnce/6c013650/dlink__2Fdownload_2FZU_5FV2bLnce_2FTycho_5F-_5FThe_5FScience_5Fof_5FPattern.mp3_3Fsbsr_3D3cb2c9ac112df079e2ca37cb52cf8e3b9d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000060116506-zfp3zc-t500x500.jpg',
+            cover: 'https://i1.sndcdn.com/artworks-000241021889-807ttx-t200x200.jpg',
             artist: 'Tycho'
         },
         {
@@ -39,7 +39,7 @@ export class PlaylistService {
     ];
 
     indexSong: number = 0;
-    currentTrack: BehaviorSubject<Track> = new BehaviorSubject(this.playlist[this.indexSong]);
+    currentTrack: BehaviorSubject<{}> = new BehaviorSubject(this.playlist[this.indexSong]);
     currentTime: number = 0;
     duration: number = 0;
 
@@ -80,10 +80,18 @@ export class PlaylistService {
     };
 
     updateCurrentSong(): void {
-        this.currentTrack.next( this.playlist[this.indexSong] );
+        let current = this.playlist[this.indexSong];
+        let previous = ((this.indexSong-1) >= 0) ? this.playlist[this.indexSong-1] : this.playlist[this.playlist.length-1];
+        let next = ((this.indexSong+1) >= this.playlist.length) ? this.playlist[0] : this.playlist[this.indexSong+1];
+
+        this.currentTrack.next( [
+            previous,
+            current,
+            next 
+        ]);
     };
 
-    getSubjectCurrentTrack(): BehaviorSubject<Track> {
+    getSubjectCurrentTrack(): BehaviorSubject<{}> {
         return this.currentTrack;
     };
     

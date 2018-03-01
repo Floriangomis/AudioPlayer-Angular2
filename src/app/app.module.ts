@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 // Component
 import { PlayerComponent } from '../components/player/player.component';
 import { PlaylistComponent } from '../components/playlist/playlist.component';
+import { CoversliderComponent } from '../components/coverslider/coverslider.component';
 // Service
 import { PlaylistService } from '../service/playlist.service';
 // Pipe
@@ -18,6 +19,7 @@ import { secondsToMinutesPipe } from '../pipe/secondsToMinutes.pipe';
     AppComponent,
     PlayerComponent,
     PlaylistComponent,
+    CoversliderComponent,
     secondsToMinutesPipe
   ],
   imports: [

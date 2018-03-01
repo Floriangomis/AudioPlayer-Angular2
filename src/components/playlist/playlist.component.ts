@@ -12,15 +12,14 @@ import { Track } from '../../model/track';
 export class PlaylistComponent implements OnInit {
 
     playlist: [Track];
-    currentTrack: Track;
+    playlistTrack: any;
 
     constructor(private playlistService: PlaylistService) { };
 
     ngOnInit(): void { 
         this.playlist = this.playlistService.getPlaylist();
-        this.playlistService.getSubjectCurrentTrack().subscribe( (currentTrack) => {
-            console.debug(`PlayList receive the new Track : ${currentTrack.title}`);
-            this.currentTrack = currentTrack;
+        this.playlistService.getSubjectCurrentTrack().subscribe( (playlistTrack) => {
+            this.playlistTrack = playlistTrack;
         });
     };
 

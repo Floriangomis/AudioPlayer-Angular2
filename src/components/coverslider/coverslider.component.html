@@ -1,0 +1,5 @@
+<div #container class="cover-slider-container">
+    <div *ngFor="let track of playlistTrack; let i = index;" [ngClass]="{ current: (i===1), previous: (i===0), next: (i===2) }">
+            <img class="cover" [src]="track.cover" alt="">
+    </div>
+</div>

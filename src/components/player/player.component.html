@@ -1,16 +1,19 @@
 <div class="container-player" [ngStyle]="getBackgroundColored()">
 
     <div class="cover-container">
-        <img class="cover" [src]="currentTrack.cover" alt="">
+        <coverslider #coverSlider [playlistTrack]="playlistTrack"
+             >
+        </coverslider>
+        <!-- <img class="cover" [src]="playlistTrack.current.cover" alt=""> -->
     </div>
 
     <div class="container-informations-track">
         <div class="title-track no-select">
-            {{ currentTrack.title }}
+            {{ playlistTrack[1].title }}
         </div>
 
         <div class="artist-name-track no-select">
-                {{ currentTrack.artist }}
+                {{ playlistTrack[1].artist }}
         </div>
 
         <div #timeLineTrack class="timeline-track">
@@ -37,5 +40,5 @@
 
     <playlist class="container no-select"></playlist>
     
-    <audio [src]="currentTrack.link" #audioPlayer></audio>
+    <audio [src]="playlistTrack[1].link" #audioPlayer></audio>
 </div>
