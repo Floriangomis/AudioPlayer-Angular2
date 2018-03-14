@@ -4,7 +4,6 @@
         <coverslider #coverSlider [playlistTrack]="playlistTrack"
              >
         </coverslider>
-        <!-- <img class="cover" [src]="playlistTrack.current.cover" alt=""> -->
     </div>
 
     <div class="container-informations-track">
@@ -27,18 +26,17 @@
 
     <div class="controllers-player">
         <div (click)='previousSong();' class="previous-track no-select">
-            <<
+            <img src="../../assets/previous.svg" alt=""/>
         </div>
         <div (click)='playBtnHandler();' class="play-pause-track no-select">
-            {{ playPauseValue }}
+            <!-- See if we can do something better there -->
+            <img *ngIf="!isPlaying" src="../../assets/play.svg" alt=""/>
+            <img *ngIf="isPlaying" src="../../assets/play.svg" alt=""/>
         </div>
         <div (click)='nextSong();' class="next-track no-select">
-            >>
+            <img src="../../assets/next.svg" alt=""/>
         </div>
     </div>
     <div class="clear"></div>
-
-    <playlist class="container no-select"></playlist>
-    
     <audio [src]="playlistTrack[1].link" #audioPlayer></audio>
 </div>

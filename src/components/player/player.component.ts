@@ -17,7 +17,7 @@ export class PlayerComponent implements OnInit {
 
     playlistTrack: any;
     
-    playPauseValue: string = 'Play';
+    isPlaying: boolean = false;
     currentTime: number = 0;
     duration: number = 0;
 
@@ -44,11 +44,11 @@ export class PlayerComponent implements OnInit {
 
     bindPlayerEvent(): void {
         this.player.nativeElement.addEventListener('playing', (event) => {
-            this.playPauseValue = 'Pause';
+            this.isPlaying = false;
             this.duration = Math.floor(this.player.nativeElement.duration);
         });
         this.player.nativeElement.addEventListener('pause', (event) => {
-            this.playPauseValue = 'Play';
+            this.isPlaying = true;
         });
         this.player.nativeElement.addEventListener('ended', (event) => {
             this.nextSong();
