@@ -31,7 +31,7 @@
         <div (click)='playBtnHandler();' class="play-pause-track no-select">
             <!-- See if we can do something better there -->
             <img *ngIf="!isPlaying" src="../../assets/play.svg" alt=""/>
-            <img *ngIf="isPlaying" src="../../assets/play.svg" alt=""/>
+            <img *ngIf="isPlaying" src="../../assets/pause.svg" alt=""/>
         </div>
         <div (click)='nextSong();' class="next-track no-select">
             <img src="../../assets/next.svg" alt=""/>

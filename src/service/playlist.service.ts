@@ -7,35 +7,29 @@ export class PlaylistService {
 
     playlist: [Track] = [
         {
-            title: 'Dive (Full Album)',
-            link: 'https://dc602.4shared.com/img/H2WjHIByce/9d361b8/dlink__2Fdownload_2FH2WjHIByce_2FTycho_5F-_5FDive_5FFull_5FAlbum.mp3_3Fsbsr_3D5ff55b096a02e3d5e3999e2997835a8c9d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000298629111-zerc8s-t500x500.jpg',
-            artist: 'Tycho'
+            title: 'Cabrioli',
+            link: 'https://www.1010diy.com/mp3?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Dl98fXGtGkqg&quality=128k',
+            cover: 'https://static.qobuz.com/images/covers/22/29/3614979352922_600.jpg',
+            artist: 'Moussa'
         },
         {
-            title: 'The butterfly effect',
-            link: 'https://dc697.4shared.com/img/r8U8iTjJei/c0178c9b/dlink__2Fdownload_2Fr8U8iTjJei_2FButterfly-Effect_5F322834362_5Fsou.mp3_3Fsbsr_3D5c76021c7a62d95c624dcde652f23d9f9d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000305524002-bxdvmu-t500x500.jpg',
-            artist: 'Travis Scott'
+            title: 'Oh Shit !',
+            link: 'https://www.1010diy.com/mp3?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D1-Mjw96lYgU&quality=128k',
+            cover: 'https://images.genius.com/8d153823e72b48bc9b05be97f7d27141.1000x1000x1.jpg',
+            artist: 'Injury Reserve'
         },
         {
-            title: 'Awake',
-            link: 'https://dc706.4shared.com/img/eohxDhaIba/5808801/dlink__2Fdownload_2FeohxDhaIba_2FTycho_5F_5F_5FAwake.mp3_3Fsbsr_3D82a923b7fc1ccf19ff880048d89da1519d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000060116506-zfp3zc-t500x500.jpg',
-            artist: 'Tycho'
+            title: 'All this money',
+            link: 'https://www.1010diy.com/mp3?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjcZ1Te9-1go&quality=128k',
+            cover: 'https://images.genius.com/8d153823e72b48bc9b05be97f7d27141.1000x1000x1.jpg',
+            artist: 'Injury Reserve'
         },
         {
-            title: 'The Science of Pattern',
-            link: 'https://dc742.4shared.com/img/ZU_V2bLnce/6c013650/dlink__2Fdownload_2FZU_5FV2bLnce_2FTycho_5F-_5FThe_5FScience_5Fof_5FPattern.mp3_3Fsbsr_3D3cb2c9ac112df079e2ca37cb52cf8e3b9d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000241021889-807ttx-t200x200.jpg',
-            artist: 'Tycho'
-        },
-        {
-            title: 'Do for love',
-            link: 'https://dc382.4shared.com/img/n82_JNsIce/81078929/dlink__2Fdownload_2Fn82_5FJNsIce_2F2Pac_5F-_5FDo_5FFor_5FLove.mp3_3Fsbsr_3D2feec5bc19f2bcf44f4bee377eded5e79d0_26bip_3DODYuMTc3LjQuODA_26lgfp_3D52_26bip_3DODYuMTc3LjQuODA/preview.mp3',
-            cover: 'https://i1.sndcdn.com/artworks-000301660641-6x3gor-t500x500.jpg',
-            artist: 'Tupac'
-        },
+            title: 'TTKTV',
+            link: 'https://www.1010diy.com/mp3?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DUjD221A8RjQ&quality=128k',
+            cover: 'https://t2.genius.com/unsafe/220x0/https%3A%2F%2Fimages.genius.com%2F48180d50daa0299ecab0c2993e418019.1000x1000x1.jpg',
+            artist: 'Injury Reserve'
+        }
     ];
 
     indexSong: number = 0;
