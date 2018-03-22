@@ -1,0 +1,23 @@
+.player-container {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+
+    playlist {
+        position: absolute;
+    }
+    
+    player {
+        position: absolute;
+    }
+}
+
+.legend {
+    text-align: center;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    top: -26px;
+    position: relative;
+}

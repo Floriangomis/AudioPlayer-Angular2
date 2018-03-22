@@ -13,6 +13,7 @@ export class PlaylistComponent implements OnInit {
 
     playlist: [Track];
     playlistTrack: any;
+    open: boolean = false;
 
     constructor(private playlistService: PlaylistService) { };
 
@@ -26,4 +27,8 @@ export class PlaylistComponent implements OnInit {
     pickASong(index: number): void { 
         this.playlistService.selectATrack(index);
     };
+
+    openPlaylist(Event: EventTarget): void {
+        this.open = !this.open;
+    }
 }

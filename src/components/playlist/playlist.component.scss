@@ -1,35 +1,70 @@
-ul {
+.playlist-container {
+
+    background-color: rgba(0, 0, 0, .4);
+    transition-duration: 1s;
     
-    padding: 0;
+    opacity: 0;
+    height: 0;
+    max-height: 386px;
 
-    li {
-        width: 95%;
-        padding: 5px;
-        list-style: none;
-        cursor: pointer;
-        display: inline-block;
-        color: #f5f6fa;
-        background-color: #273c75;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 6px;
+    
+    &.open {
+        opacity: 1;
+        height: 386px;
+    }
 
-        &.active {
-            font-weight: bold;
-            background-color: black;
+    ul {
+        
+        padding: 0;
+        margin: 0;
+        
+        li {
+            padding: 5px;
+            list-style: none;
+            cursor: pointer;
+            display: inline-block;
             color: #f5f6fa;
-        }
+            width: 97%;
 
-        .index-track {
-            margin-right: 10px;
-            float: left;
-        }
+            &.active {
+                font-weight: bold;
+                color: #05c46b;
+            }
 
-        .title-track {
-            margin-right: 20px;
-            float: left;
-        }
+            .index-track {
+                margin-right: 10px;
+                float: left;
+            }
 
-        .artist-track {
-            margin-right: 10px;
-            float: right;
+            .title-track {
+                margin-right: 4px;
+                float: left;
+            }
+
+            .artist-track {
+                margin-right: 10px;
+                float: left;
+            }
+
+            .playing-svg {
+                float: right;
+                img {
+                    width: 20px;
+                }
+            }
         }
+    }
+}
+
+img {
+    &.playlist {
+        position: absolute;
+
+        width: 20px;
+        cursor: pointer;
+        top: 400px;
+        left: 26px;
     }
 }

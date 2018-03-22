@@ -1,14 +1,21 @@
-<ul>
-    <li *ngFor="let track of playlist; let i = index" [ngClass]="{active: playlistTrack[1].title === track.title}"(click)="pickASong(i);"> 
-        <div class="index-track">
-            {{i+1}}
-        </div>
-        <div class="title-track">
-            {{track.title}} 
-        </div>
-        <div class="artist-track">
-            {{track.artist}} 
-        </div>
-    </li>
-    <div class="clear"></div>
-</ul>
+<div class="playlist-container" [ngClass]="{open: open}">
+    <ul>
+        <li *ngFor="let track of playlist; let i = index" [ngClass]="{active: playlistTrack[1].title === track.title}"(click)="pickASong(i);"> 
+            <div class="index-track">
+                {{i+1}}
+            </div>
+            <div class="title-track">
+                {{track.title}} - 
+            </div>
+            <div class="artist-track">
+                {{track.artist}} 
+            </div>
+            <div class="playing-svg"  *ngIf="playlistTrack[1].title === track.title">
+                <img src="../../assets/sound.svg" alt="">
+            </div>
+        </li>
+        <div class="clear"></div>
+    </ul>
+</div>
+
+<img class="playlist" src="../../assets//playlist.svg" (click)="openPlaylist();" />

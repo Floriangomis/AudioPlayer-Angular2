@@ -17,10 +17,11 @@ export class PlayerComponent implements OnInit {
 
     playlistTrack: any;
     
-    isPlaying: boolean = true;
+    loaderDisplay: boolean = false;
+    isPlaying: boolean = false;
     currentTime: number = 0;
     duration: number = 0;
-
+    
     randomColor: string = '0';
     randomColor2: string = '0';
     randomColor3: string = '0';
@@ -32,7 +33,6 @@ export class PlayerComponent implements OnInit {
         
         this.playlistService.getSubjectCurrentTrack().subscribe( (playlistTrack) => {
             this.playlistTrack = playlistTrack;
-            this.play();
         }); 
 
         this.timeLineDuration.nativeElement.addEventListener('change', (data) => {
@@ -60,9 +60,20 @@ export class PlayerComponent implements OnInit {
             this.randomColor2 = (Math.floor(Math.random() * 205) + 1).toString()
             this.randomColor3 =  (Math.floor(Math.random() * 125) + 1).toString()
         });
+        this.player.nativeElement.addEventListener('loadstart', (event) => {
+            this.loaderDisplay = true;
+        });
+        this.player.nativeElement.addEventListener('loadeddata', (event) => {
+            this.loaderDisplay = false;
+        });
     };
 
     playBtnHandler(): void {
+        // If loading a song prevent spamming play button;
+        if(this.loaderDisplay) {
+            return;
+        }
+
         if( this.player.nativeElement.paused ) {
             this.player.nativeElement.play(this.currentTime);
         } else {
